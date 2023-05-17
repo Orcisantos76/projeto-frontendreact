@@ -1,0 +1,30 @@
+import { styled } from "styled-components";
+
+export const Container= styled.div`
+    display: flex;
+    height: 100%;
+    gap: 5px;
+
+`
+
+export const FilterContainer=styled.div`
+flex: 1;
+border: 1px solid red;
+width: 100%;
+padding: 5px;
+line-height:2rem;
+
+`
+export const HomeContainer=styled.div`
+flex: 3;
+border: solid 1px blue;
+padding: 5px;
+justify-content: space-between;
+line-height:2rem;
+`
+export const CartContainer=styled.div`
+flex:1;
+border: solid 1px greenyellow;
+padding: 5px;
+line-height:3rem;
+`

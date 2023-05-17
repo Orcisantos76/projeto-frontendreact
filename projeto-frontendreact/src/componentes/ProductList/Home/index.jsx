@@ -1,6 +1,6 @@
 
-import ProductCard from '../ProductCard/productCard'
-import { Topo,Cards,Container } from './homeStyle'
+import ProductCard from '../ProductCard'
+import { Topo,Cards,Container } from './style'
 
 function Home() {
     return (

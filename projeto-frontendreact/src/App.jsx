@@ -1,8 +1,10 @@
+import Filter from './componentes/Filters'
+import Home from './componentes/ProductList/Home'
+import Cart from './componentes/ShoppingCart/Cart'
+import GlobalStyles from './GlobalStyles'
+import { CartContainer, Container, FilterContainer, HomeContainer } from './style'
 
-import Filter from './componentes/Filters/filter'
-import Home from './componentes/ProductList/Home/home'
-import Cart from './componentes/ShoppingCart/Cart/cart'
-import { Container } from './componentes/ShoppingCart/Cart/cart'
+
 
 
 function App() {
@@ -10,13 +12,20 @@ function App() {
 
   return (
     <>
-      <h1>Orci</h1>
-      
+      <GlobalStyles />
       <Container>
-        <Filter />
-        <Home />
-        <Cart />
+        <FilterContainer>
+          <Filter />
+        </FilterContainer>
+        <HomeContainer>
+          <Home />
+        </HomeContainer>
+        <CartContainer>
+          <Cart />
+        </CartContainer>
+
       </Container>
+
     </>
   )
 }
