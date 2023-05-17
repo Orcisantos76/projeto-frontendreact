@@ -1,5 +1,5 @@
 
-import { ProductStyled,Texto,Botao} from './productCardStyle'
+import { ProductStyled,Texto,Botao} from './style'
 
 
 

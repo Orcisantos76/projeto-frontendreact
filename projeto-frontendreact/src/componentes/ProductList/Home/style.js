@@ -7,13 +7,13 @@ export const Container = styled.section`
 `
 
 export const Topo = styled.div`
-   
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
     .ordenacao{
+        padding: 5px;
         display: flex;
         align-items: center;
         gap: 2px;

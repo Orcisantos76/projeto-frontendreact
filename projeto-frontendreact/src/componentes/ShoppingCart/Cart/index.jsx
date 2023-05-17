@@ -1,5 +1,5 @@
 
-import { CartStyle } from './cartStyle'
+import { CartStyle } from './style'
 
 export default function Cart() {
     return (

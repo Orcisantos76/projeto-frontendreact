@@ -1,5 +1,5 @@
 
-import { FilterStyle } from './filterStyle'
+import { FilterStyle } from './style'
 
 
 
