@@ -1,18 +1,19 @@
+/* eslint-disable react/prop-types */
 
 import { ProductStyled,Texto,Botao} from './style'
 
 
 
-function ProductCard() {
-    const cardImage = `https://picsum.photos/180/180?a=${Math.floor(Math.random()*6)+1}`
+
+export function ProductCard({product}){
+    console.log(product)
     return (
         <>
-            <ProductStyled>
-                <img src= {cardImage} alt='imagem'/>
+            <ProductStyled>                
+                <img src= {product.imageUrl} alt={product.name}/>
                 <Texto>
-                    <p>Nome do Produto</p>
-                    <p>Valor</p>
-                    
+                    <p>{product.name}</p>
+                    <p>{product.value}</p>                    
                 </Texto>
                 <Botao>
                     <button>Adicionar ao Carrino</button>

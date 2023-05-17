@@ -1,10 +1,14 @@
+/* eslint-disable react/prop-types */
 
 import ProductCard from '../ProductCard'
 import { Topo,Cards,Container } from './style'
 
-function Home() {
-    return (
+function Home({productList}) {
+    return (  
+
+
         <Container>
+
             <Topo>
                 <div>
                     <p>Quantidade de produtos:</p>
@@ -20,10 +24,12 @@ function Home() {
                     </form>
                 </div>
             </Topo>
-            <Cards>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
+            <Cards>    
+                {productList.map((product)=>(
+                    <ProductCard key={product.id} product={product}/>
+                    ))
+                }
+
             </Cards>
             
         </Container>

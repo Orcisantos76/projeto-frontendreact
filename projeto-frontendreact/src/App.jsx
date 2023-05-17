@@ -1,7 +1,8 @@
-import Filter from './componentes/Filters'
-import Home from './componentes/ProductList/Home'
-import Cart from './componentes/ShoppingCart/Cart'
+import Filter from './components/Filters'
+import Home from './components/ProductList/Home'
+import Cart from './components/ShoppingCart/Cart'
 import GlobalStyles from './GlobalStyles'
+import productList from './assents/productList'
 import { CartContainer, Container, FilterContainer, HomeContainer } from './style'
 
 
@@ -9,6 +10,8 @@ import { CartContainer, Container, FilterContainer, HomeContainer } from './styl
 
 function App() {
   // const [count, setCount] = useState(0)
+ 
+  console.log(productList)
 
   return (
     <>
@@ -18,7 +21,7 @@ function App() {
           <Filter />
         </FilterContainer>
         <HomeContainer>
-          <Home />
+          <Home productList={productList}/>
         </HomeContainer>
         <CartContainer>
           <Cart />
