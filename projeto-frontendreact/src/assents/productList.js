@@ -4,13 +4,13 @@ const ProductList = [
     {
         id: 1,
         name: "produto 1",
-        value: 10000.0,
+        value: 100.0,
         imageUrl: "https://img.wallpapic-br.com/i8013-047-531/thumb/star-wars-avioes-espaco-nave-espacial-imagem-de-fundo.jpg"
     },
     {
         id: 2,
         name: "Exemplo 2",
-        value: 5000.0,
+        value: 25.0,
         imageUrl: "https://img.wallpapic-br.com/i9313-149-533/thumb/star-wars-relogios-circulo-espaco-imagem-de-fundo.jpg"
     },
     {
