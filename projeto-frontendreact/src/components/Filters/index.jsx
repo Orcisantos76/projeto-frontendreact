@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 import { FilterStyle } from './style'
 
@@ -7,7 +8,10 @@ import { FilterStyle } from './style'
 
 
 
-export default function Filter() {
+
+export default function Filter({minFilter,setMinFilter,maxFilter,setMaxFilter,searchFilter,setSearchFilter}) {
+    console.log("entrei no Filter",minFilter)
+    console.log(minFilter)
     return (
         <>
             <FilterStyle>

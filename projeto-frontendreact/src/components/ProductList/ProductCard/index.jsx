@@ -4,9 +4,9 @@ import { ProductStyled,Texto,Botao} from './style'
 
 
 
-
+// recebe {product como props} pra usar props.name
 export function ProductCard({product}){
-    console.log(product)
+    // console.log(product)
     return (
         <>
             <ProductStyled>                
