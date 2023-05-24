@@ -4,7 +4,7 @@ import Cart from './components/ShoppingCart/Cart'
 import GlobalStyles from './GlobalStyles'
 import productList from './assents/productList'
 import { CartContainer, Container, FilterContainer, HomeContainer } from './style'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 
@@ -17,7 +17,43 @@ function App() {
   const [searchFilter, setSearchFilter]= useState('')
   const [cart, setCart]= useState('')
   const [amount, setAmount]= useState('')
+  const [filteredList, setFilteredList]= useState([])
+  const [startList, setStartList]= useState([...productList])
 
+  useEffect(()=>{
+    console.log("Qualquer coisa")
+    setFilteredList(
+      startList.filter((item)=>{
+        // return minFilter ? item.value >= minFilter : item
+
+        if (minFilter){
+          console.log("entrei no if")
+          if(item.value >= minFilter){
+            return item
+          }         
+        }else{
+          return item
+          }          
+        }).filter((item)=>{
+          if (maxFilter){
+            if(item.value <= maxFilter){
+              return item
+            }
+          }else{
+            return item
+          }
+        }).filter((item)=>{
+          if (searchFilter){
+            if(item.name.toLowerCase().includes(searchFilter.toLowerCase())){
+              return item
+            }
+          }else{
+            return item
+          }
+        })
+    )
+  }, [minFilter,maxFilter,searchFilter])
+console.log(filteredList)
   return (
     <>
       <GlobalStyles />
@@ -34,7 +70,7 @@ function App() {
         </FilterContainer>
         <HomeContainer>
           <Home 
-          productList={productList}
+          productList={filteredList}
           amount={amount}
           setAmount={setAmount}
           cart={cart}
