@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-
 import { useState } from 'react'
 import ProductCard from '../ProductCard'
 import { Topo,Cards,Container } from './style'
@@ -18,7 +17,7 @@ function Home({productList}) {
 
             <Topo>
                 <div>
-                    <p>Quantidade de produtos:</p>
+                    <p>Quantidade de produtos: {productList.length}</p>
                 </div>
                 
                 <div className='ordenacao'>

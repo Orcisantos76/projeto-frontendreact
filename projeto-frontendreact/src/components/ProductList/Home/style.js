@@ -23,6 +23,8 @@ export const Topo = styled.div`
 `
 export const Cards=styled.div`
 display: flex;
+flex-wrap: wrap;
+
 gap: 1vw;
 
 `

@@ -11,7 +11,7 @@ import { FilterStyle } from './style'
 
 export default function Filter({minFilter,setMinFilter,maxFilter,setMaxFilter,searchFilter,setSearchFilter}) {
     
-    console.log(minFilter,maxFilter,searchFilter)
+    // console.log(minFilter,maxFilter,searchFilter)
     return (
         <>
             <FilterStyle>
