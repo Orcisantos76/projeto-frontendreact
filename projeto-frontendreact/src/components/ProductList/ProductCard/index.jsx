@@ -6,17 +6,17 @@ import { ProductStyled,Texto,Botao} from './style'
 
 // recebe {product como props} pra usar props.name
 export function ProductCard({product}){
-    // console.log(product)
+    console.log(product)
     return (
         <>
             <ProductStyled>                
                 <img src= {product.imageUrl} alt={product.name}/>
                 <Texto>
-                    <p>{product.name}</p>
-                    <p>{product.value}</p>                    
+                    <p>Nome: {product.name}</p>
+                    <p>Valor: {product.value}</p>                    
                 </Texto>
                 <Botao>
-                    <button>Adicionar ao Carrino</button>
+                    Adicionar ao Carrino
                 </Botao>
                 
             </ProductStyled>

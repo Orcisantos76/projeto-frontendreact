@@ -18,10 +18,11 @@ function App() {
   const [cart, setCart]= useState('')
   const [amount, setAmount]= useState('')
   const [filteredList, setFilteredList]= useState([])
+  // eslint-disable-next-line no-unused-vars
   const [startList, setStartList]= useState([...productList])
 
   useEffect(()=>{
-    console.log("Qualquer coisa")
+    console.log("Qualquer coisa dentro do useEffect")
     setFilteredList(
       startList.filter((item)=>{
         // return minFilter ? item.value >= minFilter : item
