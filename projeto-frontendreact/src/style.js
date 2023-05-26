@@ -26,5 +26,5 @@ export const CartContainer=styled.div`
 flex:1;
 border: solid 1px white;
 padding: 5px;
-line-height:3rem;
+line-height:1.5rem;
 `

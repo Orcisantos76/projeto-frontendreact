@@ -10,13 +10,12 @@ import { useEffect, useState } from 'react'
 
 
 function App() {
-
   const [orderFilter, setOrderFilter] = useState('')
-  const [minFilter, setMinFilter] = useState('')
-  const [maxFilter, setMaxFilter] = useState('')
+  const [minFilter, setMinFilter] = useState(0)
+  const [maxFilter, setMaxFilter] = useState(0)
   const [searchFilter, setSearchFilter] = useState('')
-  const [cart, setCart] = useState('')
-  const [amount, setAmount] = useState('')
+  const [cart, setCart] = useState([])
+  const [amount, setAmount] = useState(0)
   const [filteredList, setFilteredList] = useState([])
   // eslint-disable-next-line no-unused-vars
   const [startList, setStartList] = useState([...productList])
@@ -26,7 +25,6 @@ function App() {
     setFilteredList(
       startList.filter((item) => {
         // return minFilter ? item.value >= minFilter : item
-
         if (minFilter) {
           if (item.value >= minFilter) {
             return item
@@ -80,7 +78,6 @@ function App() {
             minFilter={minFilter}
             maxFilter={maxFilter}
             searchFilter={searchFilter}
-
           />
         </HomeContainer>
         <CartContainer>
@@ -91,9 +88,7 @@ function App() {
             setCart={setCart}
           />
         </CartContainer>
-
       </Container>
-
     </>
   )
 }
