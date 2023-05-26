@@ -1,15 +1,17 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
 import ProductCard from '../ProductCard'
 import { Topo,Cards,Container } from './style'
 
-function Home({productList}) {
+function Home({productList, amount, setAmount,cart,SetCart}) {
     const [ordination, setOrdination]= useState('')
 
     const onChangeOrdination = (event)=>{
+        
         setOrdination(event.target.value)
     }
-
+    console.log(ordination)
     return (  
 
 
@@ -24,6 +26,7 @@ function Home({productList}) {
                     <p>Ordenação</p>
                     <form type="select">
                         <select value={ordination} onChange={onChangeOrdination}>
+                            <option>Selecione</option>
                             <option>Crescente</option>
                             <option>Decrescente</option>
                         </select>
