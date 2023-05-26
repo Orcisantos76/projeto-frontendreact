@@ -2,13 +2,6 @@
 
 import { FilterStyle } from './style'
 
-
-
-
-
-
-
-
 export default function Filter({
     minFilter,
     setMinFilter,
@@ -16,6 +9,7 @@ export default function Filter({
     setMaxFilter,
     searchFilter,
     setSearchFilter}) {
+        
     function onChangeMinFilter(event){ 
         if(event.target.value < 0){
             alert("Não digite um valor menor que 0")
@@ -38,7 +32,6 @@ export default function Filter({
                     <input 
                     type='number'
                     value={minFilter} 
-                    // onChange={(event)=> setMinFilter(event.target.value)}
                     onChange={onChangeMinFilter} 
                     />
                 </div>

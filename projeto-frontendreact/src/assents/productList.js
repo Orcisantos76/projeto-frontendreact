@@ -10,13 +10,13 @@ const ProductList = [
     ,
     {
         id: 2,
-        name: "Exemplo 2",
+        name: "TIE Fighter",
         value: 25.0,
         imageUrl: "https://img.wallpapic-br.com/i9313-149-533/thumb/star-wars-relogios-circulo-espaco-imagem-de-fundo.jpg"
     },
     {
         id: 3,
-        name: "Item 3",
+        name: "TIE Interceptor",
         value: 500.0,
         imageUrl: "https://img.wallpapic-br.com/i9413-241-535/thumb/star-wars-espaco-nave-espacial-logotipo-imagem-de-fundo.jpg"
     },

@@ -5,7 +5,7 @@ import { ProductStyled,Texto,Botao} from './style'
 
 
 // recebe {product como props} pra usar props.name
-export function ProductCard({product}){
+export function ProductCard({product, adicionarAoCarrinho}){
     // console.log(product)
     return (
         <>
@@ -15,8 +15,8 @@ export function ProductCard({product}){
                     <p>Nome: {product.name}</p>
                     <p>Valor: {product.value}</p>                    
                 </Texto>
-                <Botao>
-                    Adicionar ao Carrino
+                <Botao onClick={()=>adicionarAoCarrinho(product)}>
+                    Adicionar ao Carrinho
                 </Botao>
                 
             </ProductStyled>
