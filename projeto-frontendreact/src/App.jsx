@@ -6,9 +6,6 @@ import productList from './assents/productList'
 import { CartContainer, Container, FilterContainer, HomeContainer } from './style'
 import { useEffect, useState } from 'react'
 
-
-
-
 function App() {
   const [orderFilter, setOrderFilter] = useState('')
   const [minFilter, setMinFilter] = useState(0)
@@ -17,14 +14,13 @@ function App() {
   const [cart, setCart] = useState([])
   const [amount, setAmount] = useState(0)
   const [filteredList, setFilteredList] = useState([])
-  // eslint-disable-next-line no-unused-vars
+
   const [startList, setStartList] = useState([...productList])
 
-  useEffect(() => {
-    // console.log("Qualquer coisa dentro do useEffect")
+  useEffect(() => {    
+
     setFilteredList(
       startList.filter((item) => {
-        // return minFilter ? item.value >= minFilter : item
         if (minFilter) {
           if (item.value >= minFilter) {
             return item
@@ -51,7 +47,20 @@ function App() {
       })
     )
   }, [minFilter, maxFilter, searchFilter])
-  // console.log(filteredList)
+  
+
+  useEffect(() => {
+    setTimeout(() => {
+      localStorage.setItem("cart", JSON.stringify(cart))
+      localStorage.setItem("amount", JSON.stringify(amount))
+
+    }, 10)
+  }, [cart])
+  useEffect(() => {
+    setCart([...JSON.parse(localStorage.getItem("cart"))])
+    setAmount(JSON.parse(localStorage.getItem("amount")))
+  }, [])
+
   return (
     <>
       <GlobalStyles />
@@ -92,5 +101,4 @@ function App() {
     </>
   )
 }
-
 export default App

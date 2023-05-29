@@ -14,7 +14,7 @@ function Home({ productList,
     searchFilter }) {
 
     const [ordination, setOrdination] = useState('')
-    const [productListFiltered, setProductListFiltered] = useState(...productList)
+    const [productListFiltered, setProductListFiltered] = useState([...productList])
 
     const onChangeOrdination = (event) => {
         setOrdination(event.target.value)
@@ -44,9 +44,10 @@ function Home({ productList,
             setCart(novoCarrrinho);
 
         }
-    } console.log(productList)
+    } 
 
     useEffect(() => {
+        
         const productListFiltered = [...productList].sort((min, max) => {
             if (ordination === "Crescente") {
                 return min.value - max.value;
