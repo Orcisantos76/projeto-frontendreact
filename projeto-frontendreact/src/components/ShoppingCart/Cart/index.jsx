@@ -5,7 +5,7 @@
 import Items from '../Items'
 import { CartStyle } from './style'
 
-export default function Cart({ cart, setCart, amount, setAmount }) {
+export default function Cart({cart, setCart, amount, setAmount }) {
     function removeItem(id) {
         cart.map((produto) => {
             if (produto.id === id && produto.quantidade >= 1){
@@ -17,13 +17,12 @@ export default function Cart({ cart, setCart, amount, setAmount }) {
                 const novoCarrinho = cart.filter(produtos => produtos.quantidade !== 0)
                 setCart(novoCarrinho)
             }
-        
     });
     }
 
     return (
         <CartStyle>
-            <h2>Cart</h2>
+            <h2>Carrinho</h2>
             {cart.map((product) => {
                 return (<Items key={product.id}
                     nome={product.name}

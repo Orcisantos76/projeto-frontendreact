@@ -14,10 +14,19 @@ export default createGlobalStyle`
 */
 body, html{
     background-image: url(https://cdn.pixabay.com/photo/2023/01/02/23/50/stars-7693324_1280.jpg);
-    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
     font-family: 'Times New Roman', Times, serif;
     color: white;
+    /* codigo para colocar imagem sem quebrar, cobrindo 100% da tela */
+    background-repeat: no-repeat;    
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size: cover;
 }
 `

@@ -13,7 +13,7 @@ export function ProductCard({product, adicionarAoCarrinho}){
                 <img src= {product.imageUrl} alt={product.name}/>
                 <Texto>
                     <p>Nome: {product.name}</p>
-                    <p>Valor: {product.value}</p>                    
+                    <p>Valor: {product.value.toFixed(2).replace(".", ",")}</p>                    
                 </Texto>
                 <Botao onClick={()=>adicionarAoCarrinho(product)}>
                     Adicionar ao Carrinho

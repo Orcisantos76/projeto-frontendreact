@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const FilterStyle = styled.div`
     padding: 1%;
     width: 100%;
